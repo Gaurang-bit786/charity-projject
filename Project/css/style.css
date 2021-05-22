@@ -1,0 +1,27 @@
+#link{
+    color:darkslategrey;
+}
+#blogbanner{
+    opacity:0.6;
+}
+#post:hover{
+    text-decoration: underline;
+    color:cadetblue
+}
+
+#post{
+    text-decoration: none;
+    color:black
+}
+#active{
+    text-decoration: underline;
+    color:black;
+}
+
+#foot{
+    background-color: seagreen;
+}
+
+#link:hover{
+    color:black;
+}

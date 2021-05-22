@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Donation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand px-3" href="#">Logo</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"> <i class="fa fa-list" aria-hidden="true"></i> </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul id="link" class="navbar-nav ml-auto mt-2 mt-lg-0 mr-5">
+                <li class="nav-item mx-1">
+                    <a class="nav-link border-1 font-weight-bolder" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mx-1 ">
+                    <a  class="nav-link font-weight-bolder " href="./about.html">About</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a  class="nav-link font-weight-bolder" href="./event.html">Event</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link font-weight-bolder" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item mx-1 ">
+                    <a id="active" class="nav-link font-weight-bolder" href="./donationform.html">Donation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container p-5 mt-5">
+        <h2><u>I WOULD LIKE TO DONATE</u></h2>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="row text-center">
+                    <div class="col">
+                        <button onclick="donate('10,000')" class="btn btn-primary shadow"> <i class="fas fa-rupee-sign    "></i> 10,000</button>
+                    </div>
+                    <div class="col">
+                        <button onclick="donate('7500')"  class="btn btn-primary shadow"> <i class="fas fa-rupee-sign    "></i> 7500</button>
+                    </div>
+                </div>
+                <div class="row mt-3 text-center">
+                    <div class="col">
+                        <button onclick="donate('5000')"  class="btn btn-primary shadow"><i class="fas fa-rupee-sign    "></i> 5000</button>
+                    </div>
+                    <div class="col">
+                        <button onclick="donate('2500')"  class="btn btn-primary shadow"> <i class="fas fa-rupee-sign    "></i> 2500</button>
+                    </div>
+                </div>
+                <div class="row mt-3 text-center">
+                    <div class="col">
+                        <button onclick="donate('1250')"  class="btn btn-primary shadow"> <i class="fas fa-rupee-sign    "></i> 1250</button>
+                    </div>
+                    <div class="col">
+                        <button onclick="donate('750')"  class="btn btn-primary shadow"> <i class="fas fa-rupee-sign    "></i> 750</button>
+                    </div>
+                </div>
+                <input type="text" class="form-control mt-5" name="" id="amount" placeholder="Enter amount of your choice">
+                <input type="text" class="form-control mt-3" name="" id="" placeholder="Name">
+                <input type="email" class="form-control mt-3" name="" id="" placeholder="Email">
+                <input type="number" class="form-control mt-3" name="" id="" placeholder="Contact">
+                <input type="date" class="form-control mt-3" name="" id="" placeholder="dd-mm-yyyy">
+                <input type="text" class="form-control mt-3" name="" id="" placeholder="Enter Your City">
+                <input type="text" class="form-control mt-3" name="" id="" placeholder="Enter Your State">
+                <textarea name="" id="" class="form-control mt-3" cols="30" rows="3" placeholder="Enter Your Adddress"></textarea>
+                <input type="text" class="form-control mt-3" name="" id="" placeholder="Enter Your Aadhaar/PAN card number">
+                <input type="text" class="form-control mt-3" name="" id="" placeholder="Enter Your Pincode">
+                <input type="button" class="form-control btn btn-primary mt-3" value="Donate">
+            </div>
+            <div class="col-md m-3 shadow-lg">
+                <h3>Please contribute. Your small contribution can change and transform lives.</h3>
+                <p>850+ children Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum officiis sunt consequatur maxime voluptate, veritatis voluptatem pariatur? Omnis, doloribus quo?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis delectus laborum reiciendis cupiditate exercitationem ea minima cumque odio eius iste!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis delectus laborum reiciendis cupiditate exercitationem ea minima cumque odio eius iste!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis delectus laborum reiciendis cupiditate exercitationem ea minima cumque odio eius iste!</p>
+            
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid mt-5 p-5" id="foot">
+        <div class="row text-center text-light">
+              <div class="col-md p-3 m-3">
+                  <h1>Logo</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam alias dignissimos commodi consequatur sint!</p>
+                  <div class="row text-center">
+                      <div class="col-md">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-md">
+                          133 XYZ Road
+                      </div>
+                  </div>
+                  <div class="row text-center">
+                      <div class="col-md">
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-md">
+                          +91-9911223344
+                      </div>
+                  </div>
+                  <div class="row text-center text-light">
+                      <div class="col-md">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                      </div>
+                      <div class="col-md">
+                          charity@email.com
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md p-3 m-3">
+                  <div class="row text-center text-light">
+                    <div class="col-md">
+                          <h3>Newsletter</h3>
+                          <p style="font-size: smaller;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos neque cumque repudiandae qui labore, odit ducimus laborum itaque suscipit ad.</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md m-2 p-3">
+                  <div class="row">
+                      <div class="col">
+                          <a href="#" ><i class="fa fa-facebook display-4 text-light" aria-hidden="true"></i></a>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                        <a href="#"><i class="fa fa-twitter display-4 text-light" aria-hidden="true"></i></a>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                        <a href="#"><i class="fa fa-instagram display-4 text-light" aria-hidden="true"></i></a>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                            <a href="#"><i class="fa fa-pinterest display-4 text-light" aria-hidden="true"></i></a>
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

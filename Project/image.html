@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+        <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!--google material icon-->
+        
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <title>Welcome to QR world</title>
+
+    </head>
+    <body>
+        
+              <button id="button">Click</button>
+
+
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <video name="cam" width="30px" id="preview" class="p-1 border" style="width:100%;" controls></video>
+                                        
+                                    </div> 
+                                    <select id="select"></select>
+
+
+
+
+
+        </script>
+        
+        <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+
+        <script>
+          
+            
+            
+            
+            
+            console.log(document.getElementsByName('cam'))
+            let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
+            var event = ""
+            Instascan.Camera.getCameras().then(function (cameras) {
+
+                if (cameras.length > 0) {
+                    console.log(cameras)
+                    scanner.start(cameras[0]);
+
+                } else {
+                    console.error('No cameras found.');
+                    alert('No cameras found.');
+                }
+            });
+            scanner.addListener('scan', function (content) {
+                
+               alert("See")
+                
+            });
+            
+
+        </script>
+  <script>
+    const video = document.getElementById('preview');
+const button = document.getElementById('button');
+
+button.addEventListener('click', event => {
+  const constraints = {
+    video: true,
+    audio: false
+  };
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then(stream => {
+     
+      video.srcObject = stream;
+      console.log(video.srcObject)
+    })
+    .catch(error => {
+      alert(error)
+      console.error(error);
+    });
+});
+
+ 
+ let currentStream;
+      const select = document.getElementById('select');
+      function gotDevices(mediaDevices) {
+  select.innerHTML = '';
+  select.appendChild(document.createElement('option'));
+  let count = 1;
+  mediaDevices.forEach(mediaDevice => {
+    if (mediaDevice.kind === 'videoinput') {
+      const option = document.createElement('option');
+      option.value = mediaDevice.deviceId;
+      const label = mediaDevice.label || `Camera ${count++}`;
+      console.log("camera:"+count)
+      const textNode = document.createTextNode(label);
+      option.appendChild(textNode);
+      select.appendChild(option);
+    }
+  });
+}
+
+navigator.mediaDevices.enumerateDevices().then(gotDevices);
+button.addEventListener('click', event => {
+  if (typeof currentStream !== 'undefined') {
+    stopMediaTracks(currentStream);
+  }
+  const videoConstraints = {};
+  if (select.value === '') {
+    videoConstraints.facingMode = 'environment';
+  } else {
+    videoConstraints.deviceId = { exact: select.value };
+  }
+  const constraints = {
+    video: videoConstraints,
+    audio: false
+  };
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then(stream => {
+      currentStream = stream;
+      video.srcObject = stream;
+      return navigator.mediaDevices.enumerateDevices();
+    })
+    .then(gotDevices)
+    .catch(error => {
+      console.error(error);
+    });
+})
+function stopMediaTracks(stream) {
+  stream.getTracks().forEach(track => {
+    track.stop();
+  });
+}
+
+    </script>
+    </body>
+</html>

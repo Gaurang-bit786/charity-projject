@@ -98,7 +98,9 @@ navigator.mediaDevices.enumerateDevices().then(gotDevices);
 
   button.addEventListener('click', event => {
 
-      const videoConstraints = {};
+      const videoConstraints = {
+             facingMode: 'user'
+      };
       if (select.value === '') {
         videoConstraints.facingMode = 'environment';
       } else {

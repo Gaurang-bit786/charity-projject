@@ -1,4 +1,6 @@
 
+   
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -67,25 +69,27 @@
         </script>
   <script>
     const video = document.getElementById('preview');
-const button = document.getElementById('button');
-
- 
- let currentStream;
+    const button = document.getElementById('button');
+    const select = document.getElementById('select');
+    let currentStream;
       
- const select = document.getElementById('select');
- function gotDevices(mediaDevices) {
+    function gotDevices(mediaDevices) {
       select.innerHTML = '';
       select.appendChild(document.createElement('option'));
+      console.log(select)
       let count = 1;
       mediaDevices.forEach(mediaDevice => {
         if (mediaDevice.kind === 'videoinput') {
+          console.log(mediaDevice.kind )
           const option = document.createElement('option');
           option.value = mediaDevice.deviceId;
           const label = mediaDevice.label || `Camera ${count++}`;
           console.log("camera:"+count)
           const textNode = document.createTextNode(label);
           option.appendChild(textNode);
+          console.log(textNode)
           select.appendChild(option);
+          console.log(option)
         }
     });
 }

@@ -109,9 +109,8 @@ button.addEventListener('click', event => {
 
 navigator.mediaDevices.enumerateDevices().then(gotDevices);
 button.addEventListener('click', event => {
-  if (typeof currentStream !== 'undefined') {
-    stopMediaTracks(currentStream);
-  }
+  button.addEventListener('click', event => {
+
   const videoConstraints = {};
   if (select.value === '') {
     videoConstraints.facingMode = 'environment';
@@ -122,6 +121,7 @@ button.addEventListener('click', event => {
     video: videoConstraints,
     audio: false
   };
+
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then(stream => {
